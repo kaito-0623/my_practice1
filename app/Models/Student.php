@@ -4,12 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
+
+
+
+
 class Student extends Model
 {
-    // 全件取得の関数
-    public static function getAll()
+    // テーブル名が 'students' でない場合は以下を追加
+    // protected $table = 'your_table_name';
+
+    // すべての学生データを取得するメソッド
+    public function getAll()
     {
-        return self::all();
+        return $this->all();
     }
 }
 
